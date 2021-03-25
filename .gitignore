@@ -88,3 +88,6 @@ app/src/glyphs.c
 
 app/src/glyphs.h
 /build
+
+# Python ENV
+/pyenv

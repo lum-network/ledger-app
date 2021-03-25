@@ -1,5 +1,6 @@
 #*******************************************************************************
 #   Ledger App
+#	(c) 2021 Lum Foundation
 #   (c) 2018-2020 Zondax GmbH
 #   (c) 2017 Ledger
 #
@@ -25,12 +26,12 @@ MY_DIR := $(dir $(lastword $(MAKEFILE_LIST)))
 include $(BOLOS_SDK)/Makefile.defines
 
 # Main app configuration
-APPNAME = "Cosmos"
-APPVERSION_M=2
-APPVERSION_N=16
+APPNAME = "Lum"
+APPVERSION_M=1
+APPVERSION_N=0
 APPVERSION_P=0
 
-APPPATH = "44'/118'"
+APPPATH = "44'/837'"
 APP_LOAD_PARAMS = --appFlags 0x200 --delete $(COMMON_LOAD_PARAMS) --path $(APPPATH)
 
 ifeq ($(TARGET_NAME),TARGET_NANOS)
@@ -172,4 +173,4 @@ delete:
 	python -m ledgerblue.deleteApp $(COMMON_DELETE_PARAMS)
 
 listvariants:
-	@echo VARIANTS COIN cosmos
+	@echo VARIANTS COIN lum
